@@ -19,16 +19,18 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 const Sidebar = () => {
   const theme = useTheme();
-  const color = tokens(theme.palette.mode);
+  const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
-  return <Box sx={{ 
-    "& .pro-sidebar-inner":{ 
-      background: 
-    }
-   }}>
-
-  </Box>;
+  return (
+    <Box
+      sx={{
+        "& .pro-sidebar-inner": {
+          background: `${colors.primary[400]} !important`,
+        },
+      }}
+    ></Box>
+  );
 };
 export default Sidebar;
